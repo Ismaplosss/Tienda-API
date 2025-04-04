@@ -1,0 +1,101 @@
+# ----------------------------------------
+# ARCHIVO .GITIGNORE COMBINADO (Visual Studio + VS Code)
+# ----------------------------------------
+
+### IDE GENERAL ###
+# Configuraciones de usuario (ignorar)
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+### VISUAL STUDIO ###
+# Build y temporales
+bin/
+obj/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+*.cache
+*.pdb
+*.ilk
+
+# Configuraciones de IDE
+.vs/
+.vscode/
+*.vcxproj.user
+
+# Dependencias
+packages/
+*.nupkg
+*.snupkg
+
+# Pruebas
+[Tt]est[Rr]esult*/
+*.TestResult.xml
+*.coverage
+
+### VS CODE ###
+# Configuración (excepto archivos clave)
+.vscode/*
+!.vscode/settings.json    # Compartir configuraciones básicas
+!.vscode/tasks.json       # Tareas de compilación
+!.vscode/launch.json      # Configuración de debug
+
+# Historial y extensiones
+.history/
+*.vsix
+.ionide/
+
+### LENGUAJES ###
+# .NET
+project.lock.json
+artifacts/
+
+# Node.js/JavaScript
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Java
+*.class
+*.jar
+
+### SISTEMA ###
+# Archivos temporales
+*.tmp
+*.temp
+Thumbs.db
+
+# Sensibles
+*.env
+*.secret
+appsettings.Development.json
+
+# ----------------------------------------
+# REGLAS ESPECÍFICAS ADICIONALES
+# ----------------------------------------
+# Docker
+.devcontainer/
+
+# Azure
+*.azurePubxml
+PublishScripts/
+
+# SQL
+*.mdf
+*.ldf
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# Windows
+Thumbs.db

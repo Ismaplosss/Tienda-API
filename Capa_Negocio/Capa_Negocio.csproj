@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\Capa_Datos.csproj" />
+    <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.csproj" />
+    <ProjectReference Include="..\Capa_Interfaces\Capa_Interfaces.csproj" />
+    <ProjectReference Include="..\Capa_Servicio\Capa_Servicio.csproj" />
+  </ItemGroup>
+
+</Project>

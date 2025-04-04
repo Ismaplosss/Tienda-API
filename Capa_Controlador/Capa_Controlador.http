@@ -1,0 +1,6 @@
+@Capa_Controlador_HostAddress = http://localhost:5170
+
+GET {{Capa_Controlador_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
