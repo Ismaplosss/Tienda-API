@@ -8,8 +8,11 @@ using Npgsql;
 
 namespace Capa_Datos
 {
+
+    
     public class CD_Producto : IProducto
     {
+       
         public Task<IEnumerable<Producto>> ObtenerProductos()
 {
     var lista = new List<Producto>();
@@ -25,6 +28,10 @@ namespace Capa_Datos
         {
             while (reader.Read())
             {
+                // Incrementamos la cantidad de productos
+            
+              
+                // Asumiendo que el orden de las columnas en la base de datos es el mismo que en la clase Producto
                 var producto = new Producto
                 {
                     IdProducto = reader.GetInt32(0),
@@ -37,7 +44,8 @@ namespace Capa_Datos
                     Ruta_Imagen = reader.GetString(7),
                     Nombre_Imagen = reader.GetString(8),
                     Activo = reader.GetBoolean(9),
-                    Fecha_Registro = reader.GetString(10),
+                   Fecha_Registro = reader.GetDateTime(10).ToString("yyyy-MM-dd"),
+
                 };
                 lista.Add(producto);
             }
@@ -46,6 +54,24 @@ namespace Capa_Datos
     
     return Task.FromResult<IEnumerable<Producto>>(lista);
 }
-       
+
+
+public Task<int> CantidadProductos()
+{
+    int cantidad = 0;
+    string CadenaConexion = ClassConexion.CadenaConexion; // Asegúrate de tener la cadena correcta.
+
+    using (var connection = new NpgsqlConnection(CadenaConexion))
+    {
+        connection.Open();
+        var command = new NpgsqlCommand("SELECT COUNT(*) FROM producto", connection);
+        cantidad = Convert.ToInt32(command.ExecuteScalar());
+    }
+    
+    return Task.FromResult(cantidad);
+
+    
+
+}
     }
 }

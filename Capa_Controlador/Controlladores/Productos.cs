@@ -19,7 +19,7 @@ namespace Capa_Controlador.Controlladores
             _listadoProductos = listadoProductos;
         }
 
-        [HttpGet]
+        [HttpGet("Listado")]
         public async Task<ActionResult<List<Producto>>> Get()
         {
             try
@@ -32,5 +32,22 @@ namespace Capa_Controlador.Controlladores
                 return BadRequest(ex.Message);
             }
         }
-    }
+
+        [HttpGet ("cantidad")]
+        public  async Task<ActionResult> Cantidad()
+        {
+            try
+            {
+                var cantidad = await _listadoProductos.Listada_Canidad();
+                return Ok(cantidad);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+       
+}
+
 }

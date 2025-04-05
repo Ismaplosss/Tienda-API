@@ -11,5 +11,7 @@ namespace Capa_Interfaces
     public  interface IProducto
     {
         Task<IEnumerable<Producto>> ObtenerProductos();
+        Task<int> CantidadProductos();
+
     }
 }

@@ -9,5 +9,7 @@ namespace Capa_Interfaces
     public interface IlistadoProducto
     {
         Task<IEnumerable<Producto>> GetProductos();
+        
+       Task<int> Listada_Canidad();
     }
 }

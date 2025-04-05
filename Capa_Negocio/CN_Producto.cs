@@ -33,6 +33,14 @@ namespace Capa_Negocio
             
             return _producto.ObtenerProductos();
         }
+        // Método que obtiene la cantidad de productos
+      
+        public Task<int> Listada_Canidad()
+        {
+            return _producto.CantidadProductos();
+        }
+       
+        
     }
     
         
