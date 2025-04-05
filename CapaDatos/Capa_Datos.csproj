@@ -11,4 +11,9 @@
     <ProjectReference Include="..\Capa_Interfaces\Capa_Interfaces.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Npgsql" Version="9.0.3" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
+  </ItemGroup>
+
 </Project>
