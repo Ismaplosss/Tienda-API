@@ -11,9 +11,9 @@ namespace Capa_Entidad
     public class categoria
     {
         public int IdCategoria { get; set; }
-        public string Descripcion { get; set; }
+        public  required string  Descripcion { get; set; }
         public bool Activo { get; set; }
-        public string Fecha_Registro { get; set; }
+        public  required string Fecha_Registro { get; set; }
 
     }
 }

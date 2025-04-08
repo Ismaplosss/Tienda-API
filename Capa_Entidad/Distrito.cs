@@ -8,10 +8,10 @@ namespace Capa_Entidad
 {
     public  class Distrito
     {
-        public string IdDistrito { get; set;  }
-        public string Descripcion { get; set;  }
-        public string IdProvincia { get; set; }
-        public string IdCanton { get; set;  }
+        public required string IdDistrito { get; set;  }
+        public  required string Descripcion { get; set;  }
+        public required string IdProvincia { get; set; }
+        public required string IdCanton { get; set;  }
 
 
     }

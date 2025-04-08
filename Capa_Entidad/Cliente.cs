@@ -10,12 +10,12 @@ namespace Capa_Entidad
     {
 
         public int IdCliente { get; set; }
-        public string Nombre { get; set; }
-        public string Apellidos { get; set; }
-        public string Correo { get; set; }
-        public string Clave { get; set; }
+        public  required string Nombre { get; set; }
+        public required string Apellidos { get; set; }
+        public required string Correo { get; set; }
+        public  required string Clave { get; set; }
         public bool Reestablecer { get; set; }
         public bool Activo { get; set; }
-        public string Fecha_Registro { get; set; }
+        public required string Fecha_Registro { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace Capa_Entidad
 {
     public class Canton
     {
-        public string IdCanton { get; set; }
-        public string Descripcion { get; set; }
+        public required string IdCanton { get; set; }
+        public required string Descripcion { get; set; }
     }
 }

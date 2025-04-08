@@ -10,8 +10,8 @@ namespace Capa_Entidad
    public  class Detalle_Venta
     {
         public int IdDetalleVenta { get; set;  }
-        public Venta OVenta { get; set;  }
-        public Producto OProducto { get; set;  }
+        public required Venta OVenta { get; set;  }
+        public required Producto OProducto { get; set;  }
         public int Cantidad { get; set; }
         public decimal Total { get; set;  }
     }

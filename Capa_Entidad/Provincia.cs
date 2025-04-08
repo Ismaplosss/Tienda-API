@@ -8,8 +8,8 @@ namespace Capa_Entidad
 {
      public class Provincia
     {
-        public string IdProvincia { get; set; }
-        public string Descripcion { get; set; }
-        public string IdCanton { get; set;  }
+        public required string IdProvincia { get; set; }
+        public required string Descripcion { get; set; }
+        public required string IdCanton { get; set;  }
     }
 }
